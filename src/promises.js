@@ -12,9 +12,6 @@ const intervalObj = setInterval(() => {
     sensaSay("For the North").then(value => {
       console.log(value);
     }),
-    aryaSay('The king in the North').then(value => {
-      console.log(value);
-    }),
     new Promise((resolve, reject) => {
       if(called) {
         called = false;
@@ -23,6 +20,9 @@ const intervalObj = setInterval(() => {
         });
       }
       resolve();
+    }),
+    aryaSay('The king in the North').then(value => {
+      console.log(value);
     })
   ])
   setTimeout(() => clearInterval(intervalObj), 10000);
